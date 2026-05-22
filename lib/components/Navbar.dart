@@ -42,26 +42,30 @@ class _NavbarState extends State<Navbar> {
               children: [
                 ...navComponents.map(
                   (items) => Expanded(
-                    child: Material(
-                      color: _currentIndex == items.currentIndex ? Colors.red : Colors.transparent,
-                      child: InkWell(
-                        onTap: () => {
-                          setState(() {
-                              _currentIndex = items.currentIndex;
-                          }),
-                        },
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(items.icon, color: Colors.redAccent),
-                            Text(
-                              items.name,
-                              style: TextStyle(
-                                color: Colors.redAccent
-                              ),
-                            )
-                          ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Material(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(20)),
+                        color: _currentIndex == items.currentIndex ? Color(0xfff8e5e9) : Colors.transparent,
+                        child: InkWell(
+                          onTap: () => {
+                            setState(() {
+                                _currentIndex = items.currentIndex;
+                            }),
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(items.icon, color: _currentIndex == items.currentIndex ? Color(0xff911b28) : Color(0xffa69ea6)),
+                              Text(
+                                items.name,
+                                style: TextStyle(
+                                  color: _currentIndex == items.currentIndex ? Color(0xff911b28) : Color(0xffa69ea6) 
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
