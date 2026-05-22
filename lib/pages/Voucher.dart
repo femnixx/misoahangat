@@ -10,6 +10,8 @@ class Voucher extends StatefulWidget {
 class _VoucherState extends State<Voucher> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('Voucher'),
+    );
   }
 }

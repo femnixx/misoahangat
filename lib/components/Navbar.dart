@@ -27,7 +27,7 @@ class _NavbarState extends State<Navbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(navComponents[_currentIndex].name)
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: Container(

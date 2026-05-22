@@ -10,6 +10,8 @@ class Pesanan extends StatefulWidget {
 class _PesananState extends State<Pesanan> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('Pesanan'),
+    );
   }
 }
